@@ -23,8 +23,8 @@ jobs:
       - run: date > stamp.txt
       - run: cp CNAME docs/
       - run: git add docs stamp.txt
-      - run: git config --global user.name 'XadillaX'
-      - run: git config --global user.email 'XadillaX@users.noreply.github.com'
-      - run: "git commit -m 'docs: update'"
+      - run: git config --global user.name 'GitHub Actions'
+      - run: git config --global user.email 'actions@github.com'
+      - run: git commit -m "docs: Deploy $GITHUB_SHA"
       - run: git push origin gh-pages
       - run: git checkout main
