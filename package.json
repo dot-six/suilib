@@ -1,8 +1,8 @@
 {
-  "name": "sfml.js",
-  "version": "0.0.1-preview.46",
-  "description": "SFML's Node.js binding.",
-  "main": "lib/sfml.js",
+  "name": "sulib",
+  "version": "0.1.0",
+  "description": "UI Framework using SFML",
+  "main": "lib/index.js",
   "scripts": {
     "build-dummy-debug": "node-gyp rebuild --debug && mv build/Debug build/Release",
     "generate_compile_commands": "node-gyp -- configure -f=gyp.generator.compile_commands_json.py && mv Release/compile_commands.json compile_commands.json && rm -rf Release && rm -rf Debug",
@@ -47,6 +47,7 @@
     "index.d.ts",
     "lib/**/*",
     "src/**/*",
+    "sfml**/*",
     "third_party/sfml/include/**/*",
     "third_party/sfm/platform/.gitkeep",
     "tools/*",
