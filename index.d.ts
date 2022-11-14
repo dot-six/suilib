@@ -1,1 +1,1 @@
-export * from './lib/sfml';
+export * from './lib/index';
