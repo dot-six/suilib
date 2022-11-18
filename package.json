@@ -48,6 +48,7 @@
     "lib/**/*",
     "src/**/*",
     "sfml**/*",
+    "extra/**/*",
     "third_party/sfml/include/**/*",
     "third_party/sfm/platform/.gitkeep",
     "tools/*",
