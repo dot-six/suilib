@@ -1,6 +1,6 @@
 {
   "name": "sulib",
-  "version": "0.1.0",
+  "version": "0.1.0-alpha.1",
   "description": "UI Framework using SFML",
   "main": "lib/index.js",
   "scripts": {
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/XadillaX/node-sfml.git"
+    "url": "git+https://github.com/dot-six/sulib.git"
   },
-  "author": "XadillaX <i@2333.moe>",
+  "author": "Hanz <hanz@godot.id>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/XadillaX/node-sfml/issues"
+    "url": "https://github.com/dot-six/sulib/issues"
   },
-  "homepage": "https://github.com/XadillaX/node-sfml#readme",
+  "homepage": "https://github.com/dot-six/sulib#readme",
   "dependencies": {
     "clang-format": "^1.4.0",
     "download": "^8.0.0",
