@@ -1,5 +1,5 @@
 {
-  "name": "sulib",
+  "name": "suilib",
   "version": "0.1.0-alpha.1",
   "description": "UI Framework using SFML",
   "main": "lib/index.js",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dot-six/sulib.git"
+    "url": "git+https://github.com/dot-six/suilib.git"
   },
   "author": "Hanz <hanz@godot.id>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dot-six/sulib/issues"
+    "url": "https://github.com/dot-six/suilib/issues"
   },
-  "homepage": "https://github.com/dot-six/sulib#readme",
+  "homepage": "https://github.com/dot-six/suilib#readme",
   "dependencies": {
     "clang-format": "^1.4.0",
     "download": "^8.0.0",
