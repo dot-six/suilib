@@ -12,4 +12,5 @@ setInterval(() => {
     }
 }, 100);
 
+w.addChild(bar);
 w.mainLoopWhile();
