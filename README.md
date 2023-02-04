@@ -7,25 +7,22 @@ Node.js binding for <a href="https://www.sfml-dev.org/">SFML</a> - a Simple and 
 </p>
 
 <p align="center">
-<a href="https://www.npmjs.org/package/sfml.js">
-  <img src="http://img.shields.io/npm/v/sfml.js.svg?style=for-the-badge&colorA=FF7800&colorB=CC5600&label=NPM" />
+<a href="https://www.npmjs.org/package/suilib">
+  <img src="http://img.shields.io/npm/v/suilib.svg?style=for-the-badge&colorA=FF7800&colorB=CC5600&label=NPM" />
 </a>
-<a href="https://www.npmjs.org/package/sfml.js">
-  <img src="http://img.shields.io/npm/dm/sfml.js.svg?style=for-the-badge&colorA=5DDB61&colorB=4BC74F&label=DOWNLOADS" />
+<a href="https://www.npmjs.org/package/suilib">
+  <img src="http://img.shields.io/npm/dm/suilib.svg?style=for-the-badge&colorA=5DDB61&colorB=4BC74F&label=DOWNLOADS" />
 </a>
 <!-- [![License](https://img.shields.io/npm/l/sfml.js.svg?style=flat)](https://www.npmjs.org/package/sfml.js) -->
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<a href="#contributors-"><img src="https://img.shields.io/badge/3-ALL%20CONTRIBUTORS?style=for-the-badge&colorA=FF69b4&colorB=cc47a4&label=ALL%20CONTRIBUTORS" />
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="https://github.com/XadillaX/node-sfml">
-  <img src="https://img.shields.io/github/stars/XadillaX/node-sfml.svg?style=for-the-badge&colorA=FBBD30&colorB=F2AA08&label=STAR" />
+  <img src="https://img.shields.io/github/stars/dot-six/suilib.svg?style=for-the-badge&colorA=FBBD30&colorB=F2AA08&label=STAR" />
 </a>
 </p>
 
 ## Installation
 
 ```bash
-$ npm install --save sfml.js
+$ npm install suilib
 ```
 
 ## Usage
@@ -36,29 +33,10 @@ $ npm install --save sfml.js
 
 ## Examples
 
-+ [node-sfml-demos](https://github.com/XadillaX/node-sfml-demos): Several small example games;
-+ [play-nes](https://github.com/XadillaX/play-nes): A cross-platform desktop NES emulator powered by OpenGL in Node.js.
++ n/a
 
 > PR is welcomed. You can add your own sfml.js example.
 
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://xcoder.in/"><img src="https://avatars.githubusercontent.com/u/2842176?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Khaidi Chu</b></sub></a><br /><a href="#maintenance-XadillaX" title="Maintenance">🚧</a> <a href="https://github.com/XadillaX/node-sfml/commits?author=XadillaX" title="Code">💻</a></td>
-    <td align="center"><a href="https://pokemonworkshop.com/forum"><img src="https://avatars.githubusercontent.com/u/7335788?v=4?s=100" width="100px;" alt=""/><br /><sub><b>NuriYuri</b></sub></a><br /><a href="https://github.com/XadillaX/node-sfml/commits?author=NuriYuri" title="Code">💻</a></td>
-    <td align="center"><a href="https://godot.id"><img src="https://avatars.githubusercontent.com/u/40712686?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hanz</b></sub></a><br /><a href="https://github.com/XadillaX/node-sfml/commits?author=HanzCEO" title="Code">💻</a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+## Special Thanks
+ - <a href="https://xcoder.in">Khaidi Chu</a> - Initial sfml.js source
+ - <a href="https://pokemonworkshop/forum">NuriYuri</a> - Maintainer of sfml.js
