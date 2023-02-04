@@ -3,8 +3,8 @@ let { Window, ProgressBar } = require('../');
 let w = new Window(500, 500);
 let bar = new ProgressBar(0, 100);
 
-bar.size.x = 100;
-bar.size.y = 10;
+bar.size.x = 200;
+bar.size.y = 20;
 
 w.addChild(bar);
 
