@@ -1,6 +1,6 @@
 {
   "name": "suilib",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "description": "UI Framework using SFML",
   "main": "lib/index.js",
   "scripts": {
