@@ -24,4 +24,4 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
-    - run: node example/window.js # TODO: Do unit testing
+    - run: node ../example/window.js # TODO: Do unit testing
