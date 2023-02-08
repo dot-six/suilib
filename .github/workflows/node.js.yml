@@ -28,4 +28,4 @@ jobs:
     - name: Run headless test
       uses: GabrielBB/xvfb-action@v1
       with:
-       run: node example/render_window_display_async.js # TODO(XadillaX): Do unit tests.
+       run: node example/window.js # TODO: Do unit testing
