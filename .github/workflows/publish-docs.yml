@@ -21,7 +21,7 @@ jobs:
       - run: mv docs.new docs
       - run: rm -f stamp
       - run: date > stamp.txt
-      - run: cp CNAME docs/
+      - run: cp -f CNAME docs/ || true
       - run: git add docs stamp.txt
       - run: git config --global user.name 'GitHub Actions'
       - run: git config --global user.email 'actions@github.com'
