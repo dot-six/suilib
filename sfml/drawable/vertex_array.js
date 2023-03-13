@@ -121,6 +121,11 @@ class VertexArray extends Drawable {
   getBounds() {
     return this._raw().getBounds();
   }
+
+  getPosition() {
+    let bounds = this.getBounds();
+    return new Vector2F(bounds.top, bounds.left);
+  }
 }
 
 VertexArray.PrimitiveType = require('../../build/Release/binding.node').PrimitiveType;
