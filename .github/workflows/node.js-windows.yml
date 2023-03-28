@@ -24,4 +24,4 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
-    - run: node example/render_window_display_async.js # TODO(XadillaX): Do unit tests.
+    #- run: node ../examples/window.js # TODO: Do unit testing

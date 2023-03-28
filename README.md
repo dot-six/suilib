@@ -25,6 +25,8 @@ Node.js binding for <a href="https://www.sfml-dev.org/">SFML</a> - a Simple and 
 $ npm install suilib
 ```
 
+> Note: postinstall script will not show in the foreground console. The script will automatically download and build SFML, it takes some minutes.
+
 ## Usage
 
 - Refer to TypeDoc: [https://sfml.js.org/](https://sfml.js.org/);
