@@ -19,6 +19,18 @@ Node.js binding for <a href="https://www.sfml-dev.org/">SFML</a> - a Simple and 
 </a>
 </p>
 
+<p align="center">
+  <a href="https://github.com/dot-six/suilib/actions/workflows/node.js-windows.yml">
+    <img src="https://github.com/dot-six/suilib/actions/workflows/node.js-windows.yml/badge.svg">
+  </a>
+  <a href="https://github.com/dot-six/suilib/actions/workflows/node.js.yml">
+    <img src="https://github.com/dot-six/suilib/actions/workflows/node.js.yml/badge.svg">
+  </a>
+  <a href="https://github.com/dot-six/suilib/actions/workflows/node.js-macos.yml">
+    <img src="https://github.com/dot-six/suilib/actions/workflows/node.js-macos.yml/badge.svg">
+  </a>
+</p>
+
 ## Installation
 
 ```bash

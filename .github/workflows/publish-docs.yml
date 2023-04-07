@@ -1,7 +1,5 @@
 name: Publish Docs
 on:
-  push:
-    branches: [ main ]
   workflow_dispatch:
 
 jobs:
@@ -22,9 +20,13 @@ jobs:
       - run: rm -f stamp
       - run: date > stamp.txt
       - run: cp -f CNAME docs/ || true
-      - run: git add docs stamp.txt
-      - run: git config --global user.name 'GitHub Actions'
-      - run: git config --global user.email 'actions@github.com'
-      - run: git commit -m "Deploy $GITHUB_SHA"
-      - run: git push origin gh-pages
-      - run: git checkout main
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: './'
+          keep_history: true
+          #fqdn: example.com # CNAME
+          jekyll: false # Solve website 404
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
