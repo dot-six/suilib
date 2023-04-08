@@ -77,6 +77,17 @@ class Text extends Drawable {
     style = parseInt(style);
     this._raw().setStyle(style);
   }
+
+  findCharacterPos(index) {
+    validateTypeOf(index, 'index', 'number');
+
+    if (index < 0) {
+      throw new RangeError('`index` should greater than 0.');
+    }
+
+    index = parseInt(index);
+    return this._raw().findCharacterPos(index);
+  }
 }
 
 setPluginPackageBound(Text.prototype);

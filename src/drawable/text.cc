@@ -12,6 +12,8 @@ using v8::FunctionTemplate;
 using v8::Local;
 using v8::Object;
 using v8::String;
+using v8::MaybeLocal;
+using v8::Value;
 
 const char text_name[] = "Text";
 Nan::Persistent<v8::Function> Text::constructor;
@@ -60,6 +62,8 @@ void Text::SetPrototype(Local<FunctionTemplate>* _tpl) {
   Nan::SetPrototypeMethod(tpl, "setLineSpacing", SetLineSpacing);
   Nan::SetPrototypeMethod(tpl, "setLetterSpacing", SetLetterSpacing);
   Nan::SetPrototypeMethod(tpl, "setStyle", SetStyle);
+
+  Nan::SetPrototypeMethod(tpl, "findCharacterPos", FindCharacterPos);
 }
 
 NAN_METHOD(Text::New) {
@@ -105,6 +109,23 @@ SET_META_VALUE(SetCharacterSize, setCharacterSize, sf::Uint32, sf::Uint32);
 SET_META_VALUE(SetLineSpacing, setLineSpacing, float, double);
 SET_META_VALUE(SetLetterSpacing, setLetterSpacing, float, double);
 SET_META_VALUE(SetStyle, setStyle, sf::Text::Style, sf::Uint32);
+
+NAN_METHOD(Text::FindCharacterPos) {
+  Text* t =
+      Nan::ObjectWrap::Unwrap<Text>(info.Holder());
+  sf::Uint32 idx = Nan::To<sf::Uint32>(info[0]).FromJust();
+  sf::Vector2f vec = t->raw<sf::Text>().findCharacterPos(idx);
+
+  Nan::TryCatch try_catch;
+  MaybeLocal<Value> maybe_vec =
+      vector2::Vector2F::NewRealInstance(info.GetIsolate(), vec);
+  if (maybe_vec.IsEmpty()) {
+    try_catch.ReThrow();
+    return;
+  }
+
+  info.GetReturnValue().Set(maybe_vec.ToLocalChecked());
+}
 
 Text::Text() : Drawable(new sf::Text()) {}
 
