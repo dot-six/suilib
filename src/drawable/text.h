@@ -34,6 +34,8 @@ class Text : public Drawable {
   static NAN_METHOD(SetLetterSpacing);
   static NAN_METHOD(SetStyle);
 
+  static NAN_METHOD(FindCharacterPos);
+
  private:
   Text();
   Text(const sf::String& string,
