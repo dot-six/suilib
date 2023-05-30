@@ -1,5 +1,5 @@
 let { Window, Rectangle } = require('../');
-let { Mouse } = require('../sfml');
+let { Mouse } = require('../');
 
 let w = new Window(100, 100);
 
@@ -12,6 +12,7 @@ rect.ev.on('mouse-drag', (delta) => console.log(rect.getRegion(), Mouse.getPosit
 
 w.setInterval(() => {
     console.log(w.eventState['MouseButtonPressed'])
+    console.log(rect.getRegion())
 }, 1000);
 
 w.mainLoopWhile();
