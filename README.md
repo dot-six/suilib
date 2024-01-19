@@ -1,9 +1,6 @@
+<h1 align="center">SUIlib</h1>
 <p align="center">
-  <img src="https://github.com/XadillaX/node-sfml/blob/main/assets/sfml.js.png?raw=true" />
-</p>
-
-<p align="center">
-Node.js binding for <a href="https://www.sfml-dev.org/">SFML</a> - a Simple and Fast cross-platform Multimedia Library.
+Node.js desktop application framework that utilizes <a href="https://libsdl.org/">SDL2</a>
 </p>
 
 <p align="center">
@@ -13,7 +10,6 @@ Node.js binding for <a href="https://www.sfml-dev.org/">SFML</a> - a Simple and 
 <a href="https://www.npmjs.org/package/suilib">
   <img src="http://img.shields.io/npm/dm/suilib.svg?style=for-the-badge&colorA=5DDB61&colorB=4BC74F&label=DOWNLOADS" />
 </a>
-<!-- [![License](https://img.shields.io/npm/l/sfml.js.svg?style=flat)](https://www.npmjs.org/package/sfml.js) -->
 <a href="https://github.com/XadillaX/node-sfml">
   <img src="https://img.shields.io/github/stars/dot-six/suilib.svg?style=for-the-badge&colorA=FBBD30&colorB=F2AA08&label=STAR" />
 </a>
@@ -23,12 +19,6 @@ Node.js binding for <a href="https://www.sfml-dev.org/">SFML</a> - a Simple and 
   <a href="https://github.com/dot-six/suilib/actions/workflows/node.js-windows.yml">
     <img src="https://github.com/dot-six/suilib/actions/workflows/node.js-windows.yml/badge.svg">
   </a>
-  <a href="https://github.com/dot-six/suilib/actions/workflows/node.js.yml">
-    <img src="https://github.com/dot-six/suilib/actions/workflows/node.js.yml/badge.svg">
-  </a>
-  <a href="https://github.com/dot-six/suilib/actions/workflows/node.js-macos.yml">
-    <img src="https://github.com/dot-six/suilib/actions/workflows/node.js-macos.yml/badge.svg">
-  </a>
 </p>
 
 ## Installation
@@ -37,20 +27,19 @@ Node.js binding for <a href="https://www.sfml-dev.org/">SFML</a> - a Simple and 
 $ npm install suilib
 ```
 
-> Note: postinstall script will not show in the foreground console. The script will automatically download and build SFML, it takes some minutes.
+> Note: postinstall script will not show in the foreground console. The script will automatically download and build its dependencies, it takes some minutes.
 
 ## Usage
 
-- Refer to TypeDoc: [https://sfml.js.org/](https://sfml.js.org/);
-- Refer to Typing Definitions: [https://github.com/XadillaX/node-sfml/blob/main/index.d.ts](https://github.com/XadillaX/node-sfml/blob/main/index.d.ts);
-- And SFML's official documentation: [https://www.sfml-dev.org/documentation/2.5.1/](https://www.sfml-dev.org/documentation/2.5.1/).
+- TypeDoc: [https://suilib.js.org/](https://suilib.js.org/);
+- Typing Definitions: [https://github.com/dot-six/suilib/blob/main/index.d.ts](https://github.com/dot-six/suilib/blob/main/index.d.ts);
 
 ## Examples
 
 + n/a
 
-> PR is welcomed. You can add your own sfml.js example.
+> PR is welcomed. You can add your own example here.
 
 ## Special Thanks
- - <a href="https://xcoder.in">Khaidi Chu</a> - Initial sfml.js source
- - <a href="https://pokemonworkshop/forum">NuriYuri</a> - Maintainer of sfml.js
+ - <a href="https://xcoder.in">Khaidi Chu</a> - Base source
+ - <a href="https://pokemonworkshop/forum">NuriYuri</a> - Maintainer of base source

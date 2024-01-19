@@ -1,14 +1,14 @@
 {
   "name": "suilib",
-  "version": "0.2.0",
-  "description": "UI Framework using SFML",
+  "version": "0.3.0-alpha.1",
+  "description": "UI Framework using SDL2",
   "main": "lib/index.js",
   "scripts": {
     "build-dummy-debug": "node-gyp rebuild --debug && mv build/Debug build/Release",
     "generate_compile_commands": "node-gyp -- configure -f=gyp.generator.compile_commands_json.py && mv Release/compile_commands.json compile_commands.json && rm -rf Release && rm -rf Debug",
-    "clang-format": "./tools/clang_format.js --style=file -i ./src/*.cc ./src/*.h ./src/drawable/*.cc ./src/drawable/*.h ./src/sound/*.cc ./src/sound/*.h ./src/workers/*.h",
-    "cpplint": "./third_party/cpplint/cpplint.py src/*.* src/**/*",
-    "jslint": "./node_modules/.bin/eslint ./**/*.js",
+    "clang-format": "node \"tools/clang_format.js\" --style=file -i ./src/*.cc ./src/*.h ./src/drawable/*.cc ./src/drawable/*.h ./src/sound/*.cc ./src/sound/*.h ./src/workers/*.h",
+    "cpplint": "py \"third_party/cpplint/cpplint.py\" src/*.* src/**/*",
+    "jslint": "\"node_modules/.bin/eslint\" ./**/*.js",
     "install": "node tools/lib_downloader.js && node-gyp rebuild"
   },
   "repository": {

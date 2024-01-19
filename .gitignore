@@ -122,6 +122,6 @@ compile_commands.json
 .vscode
 .prettierrc
 docs
-third_party/sfml/platform/*
+third_party/
 
 *~

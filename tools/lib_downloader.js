@@ -15,12 +15,7 @@ let type;
 
 switch (platform) {
   case 'darwin': {
-    if (process.arch !== 'x64') {
-      throw new Error('Unsupported architecture: ' + process.arch);
-    }
-
-    type = 'macOS';
-    break;
+    throw new Error('Unsupported architecture: ' + process.arch);
   }
 
   case 'aix':
@@ -29,12 +24,7 @@ switch (platform) {
   case 'openbsd':
   case 'sunos':
   case 'linux': {
-    if (process.arch !== 'x64') {
-      throw new Error('Unsupported architecture: ' + process.arch);
-    }
-
-    type = 'linux';
-    break;
+    throw new Error('Unsupported architecture: ' + process.arch);
   }
 
   case 'win32': {
@@ -61,32 +51,18 @@ async function downloadTarball(url) {
     strip: 1,
   });
 
-  spinner.stop(`[sfml.js] ${url} Downloaded.`);
+  spinner.stop(`[suilib] ${url} Downloaded.`);
 }
 
 (async () => {
   fs.rmSync(path.join(__dirname, '../dest'), { recursive: true, force: true });
   fs.rmSync(
-    path.join(__dirname, '../third_party/sfml/platform/macOS'),
-    { recursive: true, force: true });
-  fs.rmSync(
-    path.join(__dirname, '../third_party/sfml/platform/linux'),
-    { recursive: true, force: true });
-  fs.rmSync(
-    path.join(__dirname, '../third_party/sfml/platform/win'),
+    path.join(__dirname, '../third_party/sdl/platform/win'),
     { recursive: true, force: true });
 
   await downloadTarball((await urls.get())[type]);
   let copier;
   switch (type) {
-    case 'macOS':
-      copier = require('./copier/macos');
-      break;
-
-    case 'linux':
-      copier = require('./copier/linux');
-      break;
-
     case 'win64':
     case 'win32':
       copier = require('./copier/windows');

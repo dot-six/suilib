@@ -3,18 +3,12 @@
 const spidex = require('spidex');
 
 const urls = {
-  macOS:
-    'https://github.com/SFML/SFML/releases/download/2.5.1/SFML-2.5.1-' +
-    'macOS-clang.tar.gz',
-  linux:
-    'https://github.com/SFML/SFML/releases/download/2.5.1/SFML-2.5.1-linux-' +
-    'gcc-64-bit.tar.gz',
   win32:
-    'https://github.com/SFML/SFML/releases/download/2.5.1/SFML-2.5.1-' +
-    'windows-vc15-32-bit.zip',
+  'https://github.com/libsdl-org/SDL/releases/download/release-2.28.5/' +
+    'SDL2-2.28.5-win32-x86.zip',
   win64:
-    'https://github.com/SFML/SFML/releases/download/2.5.1/SFML-2.5.1-' +
-    'windows-vc15-64-bit.zip',
+  'https://github.com/libsdl-org/SDL/releases/download/release-2.28.5/' +
+    'SDL2-2.28.5-win32-x64.zip',
 };
 
 exports.get = async function get() {
@@ -26,7 +20,7 @@ exports.get = async function get() {
   spidex.get('https://ip.tool.lu/', (content, status) => {
     if (status !== 200) {
       console.warn(
-        '[sfml.js] Failed to get ip address, fallback to original ' +
+        '[sdl] Failed to get ip address, fallback to original ' +
         'download URL.');
       resolve(urls);
       return;
@@ -49,7 +43,7 @@ exports.get = async function get() {
     resolve(urls);
   }).on('error', err => {
     console.warn(
-      `[sfml.js] Cannot get your location with IP (${err.message})` +
+      `[sdl] Cannot get your location with IP (${err.message})` +
       ', fallback to original download URL.');
     resolve(urls);
   });
