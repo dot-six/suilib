@@ -1,2 +1,2 @@
 const suilib = require('..');
-console.log(suilib.backend.sdl.hello())
+console.log(suilib.bindings.sdl.hello())
