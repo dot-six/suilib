@@ -5,10 +5,10 @@ const spidex = require('spidex');
 const urls = {
   win32:
   'https://github.com/libsdl-org/SDL/releases/download/release-2.28.5/' +
-    'SDL2-2.28.5-win32-x86.zip',
+    'SDL2-devel-2.28.5-VC.zip',
   win64:
   'https://github.com/libsdl-org/SDL/releases/download/release-2.28.5/' +
-    'SDL2-2.28.5-win32-x64.zip',
+    'SDL2-devel-2.28.5-VC.zip',
 };
 
 exports.get = async function get() {

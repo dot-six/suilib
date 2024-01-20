@@ -123,5 +123,6 @@ compile_commands.json
 .prettierrc
 docs
 third_party/
+dest/
 
 *~
