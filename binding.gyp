@@ -4,7 +4,7 @@
     "include_dirs": [
       "<(module_root_dir)/third_party/sdl/include",
       "<!(node -e \"require('nan')\")",
-      "<!@(node -p \"require('node-addon-api').include\")"
+      "<!@(node -p \"require('node-addon-api').include\")",
     ],
     "cflags!": [ "-fno-exceptions" ],
     "cflags_cc!": [ "-fno-exceptions" ],
@@ -25,7 +25,8 @@
       }]
     ],
     "sources": [
-      "./src/suilib.cc",
+      "<(module_root_dir)/backend/sdl/main.cc",
+      "<(module_root_dir)/backend/sdl/enums/window_flags.cc",
     ],
     "dependencies": [
     #   "keycode.cc"
