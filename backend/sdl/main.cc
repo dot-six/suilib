@@ -1,6 +1,8 @@
 #include <napi.h>
 #include "enums/window_flags.h"
 
+#include "vector2.h"
+
 class Addon : public Napi::Addon<Addon> {
     public:
         Addon(Napi::Env env, Napi::Object exports) {
@@ -10,6 +12,8 @@ class Addon : public Napi::Addon<Addon> {
 
                 // Methods
             });
+
+            Vector2::Init(env, exports);
         }
 };
 
