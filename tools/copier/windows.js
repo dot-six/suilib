@@ -4,7 +4,7 @@ const fs = require('fs').promises;
 const path = require('path');
 
 const baseDir = path.join(__dirname, '../../dest');
-const targetDir = path.join(__dirname, '../../third_party');
+const targetDir = path.join(__dirname, '../../third_party/sdl');
 
 exports.move = async function move(spinner) {
   spinner.start('Moving SDL files...');
@@ -12,7 +12,7 @@ exports.move = async function move(spinner) {
   await fs.mkdir(targetDir, { recursive: true });
 
   const srcLibDir = path.join(baseDir, 'lib', 'x64');
-  const destLibDir = path.join(targetDir, '/sdl/platform/win/lib');
+  const destLibDir = path.join(targetDir, 'platform/win/lib');
   const moves = [];
   const libs = await fs.readdir(srcLibDir);
   await fs.mkdir(destLibDir, { recursive: true });
