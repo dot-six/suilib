@@ -5,4 +5,4 @@
 
 Napi::Value prepare_property_windowflags(Napi::Env env);
 
-#endif
+#endif /* __SDLBE_WINDOWFLAGS_H */

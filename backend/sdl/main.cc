@@ -2,6 +2,7 @@
 #include "enums/window_flags.h"
 
 #include "vector2.h"
+#include "window.h"
 
 class Addon : public Napi::Addon<Addon> {
     public:
@@ -13,7 +14,8 @@ class Addon : public Napi::Addon<Addon> {
                 // Methods
             });
 
-            Vector2::Init(env, exports);
+            sui_Vector2::Init(env, exports);
+            Window::Init(env, exports);
         }
 };
 

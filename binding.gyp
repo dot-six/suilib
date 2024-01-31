@@ -5,7 +5,7 @@
       "<(module_root_dir)/third_party/sdl/include",
       "<!(node -e \"require('nan')\")",
       "<!@(node -p \"require('node-addon-api').include\")",
-      "<(module_root_dir)/backend"
+      "<(module_root_dir)/backend",
     ],
     "cflags!": [ "-fno-exceptions" ],
     "cflags_cc!": [ "-fno-exceptions" ],
@@ -29,6 +29,7 @@
       "<(module_root_dir)/backend/sdl/main.cc",
       "<(module_root_dir)/backend/sdl/enums/window_flags.cc",
       "<(module_root_dir)/backend/sdl/vector2.cc",
+      "<(module_root_dir)/backend/sdl/window.cc",
     ],
     "dependencies": [
     #   "keycode.cc"

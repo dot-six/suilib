@@ -12,13 +12,16 @@
     Napi::Value myClass::property##Getter(const Napi::CallbackInfo& info) {                                 \
         Napi::Env env = info.Env();                                                                         \
                                                                                                             \
-        return Napi::Value::From(env, this->##property);                                                    \
+        return Napi::Value::From(env, this->property);                                                      \
     }                                                                                                       \
                                                                                                             \
     void myClass::property##Setter(const Napi::CallbackInfo& info, const Napi::Value& _) {                  \
         Napi::Env env = info.Env();                                                                         \
                                                                                                             \
-        this->##property = (rawtyping)(info[0].As<napityping>());                                           \
+        this->property = (rawtyping)(info[0].As<napityping>());                                             \
     }
+
+#define Macro_Method_Set(myClass, property)                                                                 \
+    void myClass::property##Setter(const Napi::CallbackInfo& info, const Napi::Value& _)                    \
 
 #endif /* BE_COMMON_GETSET_H_ */
