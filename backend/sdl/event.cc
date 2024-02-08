@@ -53,17 +53,48 @@ sui_Event::sui_Event(const Napi::CallbackInfo& info, const SDL_Event& event) : N
 // TODO: Implement these things
 Macro_Method_GetSet(sui_Event, type, Napi::Number, unsigned int)
 
-Napi::Value sui_Event::commonGetter(const Napi::CallbackInfo& info) {
-    Napi::Object obj = Napi::Object::New(info.Env());
+#define Macro_MakeObj() Napi::Object obj = Napi::Object::New(info.Env());
+#define Macro_MakeProp(prop) obj.Set(#prop, this->FROM.prop);
 
-    obj.Set("type", this->common.type);
-    obj.Set("timestamp", this->common.timestamp);
+Napi::Value sui_Event::commonGetter(const Napi::CallbackInfo& info) {
+    Macro_MakeObj()
+
+#define FROM common
+    Macro_MakeProp(type)
+    Macro_MakeProp(timestamp)
 
     return obj;
 }
 
-Napi::Value sui_Event::displayGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
-Napi::Value sui_Event::windowGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
+Napi::Value sui_Event::displayGetter(const Napi::CallbackInfo& info) {
+    Macro_MakeObj()
+
+#define FROM display
+    Macro_MakeProp(type)
+    Macro_MakeProp(timestamp)
+    Macro_MakeProp(display)
+    Macro_MakeProp(event)
+    Macro_MakeProp(data1)
+
+    return obj;
+}
+
+Napi::Value sui_Event::windowGetter(const Napi::CallbackInfo& info) {
+    Macro_MakeObj()
+
+#define FROM window
+    Macro_MakeProp(type)
+    Macro_MakeProp(timestamp)
+    Macro_MakeProp(windowID)
+    Macro_MakeProp(event)
+    Macro_MakeProp(padding1)
+    Macro_MakeProp(padding2)
+    Macro_MakeProp(padding3)
+    Macro_MakeProp(data1)
+    Macro_MakeProp(data2)
+
+    return obj;
+}
 Napi::Value sui_Event::keyGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
 Napi::Value sui_Event::editGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
 Napi::Value sui_Event::editExtGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
