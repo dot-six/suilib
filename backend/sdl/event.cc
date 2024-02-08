@@ -52,7 +52,16 @@ sui_Event::sui_Event(const Napi::CallbackInfo& info, const SDL_Event& event) : N
 
 // TODO: Implement these things
 Macro_Method_GetSet(sui_Event, type, Napi::Number, unsigned int)
-Napi::Value sui_Event::commonGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
+
+Napi::Value sui_Event::commonGetter(const Napi::CallbackInfo& info) {
+    Napi::Object obj = Napi::Object::New(info.Env());
+
+    obj.Set("type", this->common.type);
+    obj.Set("timestamp", this->common.timestamp);
+
+    return obj;
+}
+
 Napi::Value sui_Event::displayGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
 Napi::Value sui_Event::windowGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
 Napi::Value sui_Event::keyGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
