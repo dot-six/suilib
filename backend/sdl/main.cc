@@ -3,6 +3,7 @@
 
 #include "vector2.h"
 #include "window.h"
+#include "event.h"
 
 class Addon : public Napi::Addon<Addon> {
     public:
@@ -16,6 +17,7 @@ class Addon : public Napi::Addon<Addon> {
 
             sui_Vector2::Init(env, exports);
             Window::Init(env, exports);
+            sui_Event::Init(env, exports);
         }
 };
 

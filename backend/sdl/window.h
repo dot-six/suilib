@@ -2,11 +2,11 @@
 #define __SDLBE_WINDOW_H
 
 #include <napi.h>
-#include <SDL_video.h>
-#include <SDL_render.h>
+#include <SDL.h>
 
 #include "vector2.h"
 #include "common/getset.h"
+#include "event.h"
 
 // The purpose of this class is to expose methods that are beneficial for rendering
 // TODO: Find a way to initialize SDL once
@@ -19,6 +19,8 @@ class Window : public Napi::ObjectWrap<Window> {
 
         // TODO: Define CreateWindow static function
         static Napi::Value CreateWindow(Napi::CallbackInfo& info);
+
+        Napi::Object PollEvent(const Napi::CallbackInfo& info);
 
         // Properties
         std::string title;

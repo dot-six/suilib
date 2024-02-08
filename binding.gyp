@@ -30,6 +30,7 @@
       "<(module_root_dir)/backend/sdl/enums/window_flags.cc",
       "<(module_root_dir)/backend/sdl/vector2.cc",
       "<(module_root_dir)/backend/sdl/window.cc",
+      "<(module_root_dir)/backend/sdl/event.cc",
     ],
     "dependencies": [
     #   "keycode.cc"
