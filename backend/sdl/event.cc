@@ -95,6 +95,7 @@ Napi::Value sui_Event::windowGetter(const Napi::CallbackInfo& info) {
 
     return obj;
 }
+
 Napi::Value sui_Event::keyGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
 Napi::Value sui_Event::editGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
 Napi::Value sui_Event::editExtGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
@@ -153,3 +154,7 @@ void sui_Event::tfingerSetter(const Napi::CallbackInfo& info, const Napi::Value&
 void sui_Event::mgestureSetter(const Napi::CallbackInfo& info, const Napi::Value& _) {}
 void sui_Event::dgestureSetter(const Napi::CallbackInfo& info, const Napi::Value& _) {}
 void sui_Event::dropSetter(const Napi::CallbackInfo& info, const Napi::Value& _) {}
+
+#undef FROM
+#undef Macro_MakeObj
+#undef Macro_MakeProp
