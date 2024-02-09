@@ -69,6 +69,7 @@ Napi::Value sui_Event::commonGetter(const Napi::CallbackInfo& info) {
 Napi::Value sui_Event::displayGetter(const Napi::CallbackInfo& info) {
     Macro_MakeObj()
 
+#undef FROM
 #define FROM display
     Macro_MakeProp(type)
     Macro_MakeProp(timestamp)
@@ -82,6 +83,7 @@ Napi::Value sui_Event::displayGetter(const Napi::CallbackInfo& info) {
 Napi::Value sui_Event::windowGetter(const Napi::CallbackInfo& info) {
     Macro_MakeObj()
 
+#undef FROM
 #define FROM window
     Macro_MakeProp(type)
     Macro_MakeProp(timestamp)
@@ -99,6 +101,7 @@ Napi::Value sui_Event::windowGetter(const Napi::CallbackInfo& info) {
 Napi::Value sui_Event::keyGetter(const Napi::CallbackInfo& info) {
     Macro_MakeObj()
 
+#undef FROM
 #define FROM key
     Macro_MakeProp(type)
     Macro_MakeProp(timestamp)
@@ -115,6 +118,7 @@ Napi::Value sui_Event::keyGetter(const Napi::CallbackInfo& info) {
 Napi::Value sui_Event::editGetter(const Napi::CallbackInfo& info) {
     Macro_MakeObj()
 
+#undef FROM
 #define FROM edit
     Macro_MakeProp(type)
     Macro_MakeProp(timestamp)
