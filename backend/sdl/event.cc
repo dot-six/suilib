@@ -129,8 +129,35 @@ Napi::Value sui_Event::editGetter(const Napi::CallbackInfo& info) {
 
     return obj;
 }
-Napi::Value sui_Event::editExtGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
-Napi::Value sui_Event::textGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
+
+Napi::Value sui_Event::editExtGetter(const Napi::CallbackInfo& info) {
+    Macro_MakeObj()
+
+#undef FROM
+#define FROM editExt
+    Macro_MakeProp(type)
+    Macro_MakeProp(timestamp)
+    Macro_MakeProp(windowID)
+    Macro_MakeProp(text)
+    Macro_MakeProp(start)
+    Macro_MakeProp(length)
+
+    return obj;
+}
+
+Napi::Value sui_Event::textGetter(const Napi::CallbackInfo& info) {
+    Macro_MakeObj()
+
+#undef FROM
+#define FROM text
+    Macro_MakeProp(type)
+    Macro_MakeProp(timestamp)
+    Macro_MakeProp(windowID)
+    Macro_MakeProp(text)
+
+    return obj;
+}
+
 Napi::Value sui_Event::motionGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
 Napi::Value sui_Event::buttonGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
 Napi::Value sui_Event::wheelGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
