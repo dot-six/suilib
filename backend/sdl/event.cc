@@ -96,8 +96,35 @@ Napi::Value sui_Event::windowGetter(const Napi::CallbackInfo& info) {
     return obj;
 }
 
-Napi::Value sui_Event::keyGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
-Napi::Value sui_Event::editGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
+Napi::Value sui_Event::keyGetter(const Napi::CallbackInfo& info) {
+    Macro_MakeObj()
+
+#define FROM key
+    Macro_MakeProp(type)
+    Macro_MakeProp(timestamp)
+    Macro_MakeProp(windowID)
+    Macro_MakeProp(state)
+    Macro_MakeProp(repeat)
+    Macro_MakeProp(padding2)
+    Macro_MakeProp(padding3)
+    // TODO: Macro_MakeProp(keysym)
+
+    return obj;
+}
+
+Napi::Value sui_Event::editGetter(const Napi::CallbackInfo& info) {
+    Macro_MakeObj()
+
+#define FROM edit
+    Macro_MakeProp(type)
+    Macro_MakeProp(timestamp)
+    Macro_MakeProp(windowID)
+    Macro_MakeProp(text)
+    Macro_MakeProp(start)
+    Macro_MakeProp(length)
+
+    return obj;
+}
 Napi::Value sui_Event::editExtGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
 Napi::Value sui_Event::textGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
 Napi::Value sui_Event::motionGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
