@@ -158,8 +158,43 @@ Napi::Value sui_Event::textGetter(const Napi::CallbackInfo& info) {
     return obj;
 }
 
-Napi::Value sui_Event::motionGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
-Napi::Value sui_Event::buttonGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
+Napi::Value sui_Event::motionGetter(const Napi::CallbackInfo& info) {
+    Macro_MakeObj()
+
+#undef FROM
+#define FROM motion
+    Macro_MakeProp(type)
+    Macro_MakeProp(timestamp)
+    Macro_MakeProp(windowID)
+    Macro_MakeProp(which)
+    Macro_MakeProp(state)
+    Macro_MakeProp(x)
+    Macro_MakeProp(y)
+    Macro_MakeProp(xrel)
+    Macro_MakeProp(yrel)
+
+    return obj;
+}
+
+Napi::Value sui_Event::buttonGetter(const Napi::CallbackInfo& info) {
+    Macro_MakeObj()
+
+#undef FROM
+#define FROM button
+    Macro_MakeProp(type)
+    Macro_MakeProp(timestamp)
+    Macro_MakeProp(windowID)
+    Macro_MakeProp(which)
+    Macro_MakeProp(button)
+    Macro_MakeProp(state)
+    Macro_MakeProp(clicks)
+    Macro_MakeProp(padding1)
+    Macro_MakeProp(x)
+    Macro_MakeProp(y)
+
+    return obj;
+}
+
 Napi::Value sui_Event::wheelGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
 Napi::Value sui_Event::jaxisGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
 Napi::Value sui_Event::jballGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
