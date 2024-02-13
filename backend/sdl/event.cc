@@ -195,9 +195,62 @@ Napi::Value sui_Event::buttonGetter(const Napi::CallbackInfo& info) {
     return obj;
 }
 
-Napi::Value sui_Event::wheelGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
-Napi::Value sui_Event::jaxisGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
-Napi::Value sui_Event::jballGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
+Napi::Value sui_Event::wheelGetter(const Napi::CallbackInfo& info) {
+    Macro_MakeObj()
+
+#undef FROM
+#define FROM wheel
+    Macro_MakeProp(type)
+    Macro_MakeProp(timestamp)
+    Macro_MakeProp(windowID)
+    Macro_MakeProp(which)
+    Macro_MakeProp(x)
+    Macro_MakeProp(y)
+    Macro_MakeProp(direction)
+    Macro_MakeProp(preciseX)
+    Macro_MakeProp(preciseY)
+    Macro_MakeProp(mouseX)
+    Macro_MakeProp(mouseY)
+
+    return obj;
+}
+
+Napi::Value sui_Event::jaxisGetter(const Napi::CallbackInfo& info) {
+    Macro_MakeObj()
+
+#undef FROM
+#define FROM jaxis
+    Macro_MakeProp(type)
+    Macro_MakeProp(timestamp)
+    // TODO: Macro_MakeProp(which)
+    Macro_MakeProp(axis)
+    Macro_MakeProp(padding1)
+    Macro_MakeProp(padding2)
+    Macro_MakeProp(padding3)
+    Macro_MakeProp(value)
+    Macro_MakeProp(padding4)
+
+    return obj;
+}
+
+Napi::Value sui_Event::jballGetter(const Napi::CallbackInfo& info) {
+    Macro_MakeObj()
+
+#undef FROM
+#define FROM jball
+    Macro_MakeProp(type)
+    Macro_MakeProp(timestamp)
+    // TODO: Macro_MakeProp(which)
+    Macro_MakeProp(ball)
+    Macro_MakeProp(padding1)
+    Macro_MakeProp(padding2)
+    Macro_MakeProp(padding3)
+    Macro_MakeProp(xrel)
+    Macro_MakeProp(yrel)
+
+    return obj;
+}
+
 Napi::Value sui_Event::jhatGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
 Napi::Value sui_Event::jbuttonGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
 Napi::Value sui_Event::jdeviceGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
