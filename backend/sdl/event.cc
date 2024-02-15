@@ -251,7 +251,22 @@ Napi::Value sui_Event::jballGetter(const Napi::CallbackInfo& info) {
     return obj;
 }
 
-Napi::Value sui_Event::jhatGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
+Napi::Value sui_Event::jhatGetter(const Napi::CallbackInfo& info) {
+    Macro_MakeObj()
+
+#undef FROM
+#define FROM jhat
+    Macro_MakeProp(type)
+    Macro_MakeProp(timestamp)
+    // TODO: Macro_MakeProp(which)
+    Macro_MakeProp(hat)
+    Macro_MakeProp(value)
+    Macro_MakeProp(padding1)
+    Macro_MakeProp(padding2)
+
+    return obj;
+}
+
 Napi::Value sui_Event::jbuttonGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
 Napi::Value sui_Event::jdeviceGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
 Napi::Value sui_Event::jbatteryGetter(const Napi::CallbackInfo& info) { return Napi::Value::Value(); }
